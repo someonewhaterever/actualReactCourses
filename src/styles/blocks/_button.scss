@@ -1,0 +1,25 @@
+@use '../helpers' as *;
+
+.btn {
+    display: inline-block;
+    justify-content: center;
+    padding: rem(18) rem(24);
+    font-size: rem(28);
+    font-weight: 500;
+    white-space: nowrap;
+    border: var(--border);
+    border-radius: rem(12);
+    transition: all var(--transition-duration) ease-in-out;
+
+    @include laptop {
+        padding: rem(14) rem(20);
+        font-size: rem(14);
+        border-radius: rem(8);
+    }
+
+    @include hover {
+        color: var(--color-abs-white);
+        background-color: var(--color-dark-10);
+        font-size:rem(18);
+    }
+}

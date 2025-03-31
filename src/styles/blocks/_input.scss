@@ -1,0 +1,55 @@
+@use '../helpers' as *;
+
+.input-wrapper{
+    display: inline-flex;
+    gap: 1rem;
+    align-items: center;
+    padding: rem(8);
+    
+
+    border-radius: rem(20);
+    border: var(--border);
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+    background-color: var(--color-abs-white);
+
+    transition: all 0.3s ease-in-out;
+
+        
+        
+
+    @include hover {
+        border: var(--border);
+        color: var(--color-abs-white);
+        border-color: var(--color-primary);
+        background-color: var(--color-primary);
+        border-radius: rem(20);
+
+        
+
+    }
+
+  /* По умолчанию скрываем input */
+  .search-input {
+    flex: 1;
+    border: none;
+    background-color: transparent;
+    font-size: rem(16);
+    line-height: 1;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+    width: 0;      // Исходная ширина – скрыто
+    opacity: 0;    // Невидимый
+    padding: 0; 
+    align-items: center;   // Убираем отступы, чтобы не было лишнего пространства
+  }
+
+  /* Активное состояние, когда поле должно быть видно */
+  &.active {
+    .search-input {
+      width: 150px;    // Задаем нужную ширину поля
+      opacity: 1;      // Полностью видимый
+      padding: rem(8); // Восстанавливаем отступы для удобства ввода
+    }
+  }
+}

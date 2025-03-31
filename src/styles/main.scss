@@ -6,11 +6,13 @@
 
 
 
+
+
+@use "./blocks/button";
+@use './blocks/input';
+@use "./blocks/logo";
 @use "./blocks/header";
 @use "./blocks/courses";
 
-home{
-    background-color: var(--color-abs-black);
 
-}
 

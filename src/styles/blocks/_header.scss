@@ -1,0 +1,126 @@
+@use '../helpers' as *;
+
+.header {
+    &__body {
+        text-align: center;
+        padding-block: rem(15);
+        border-bottom: var(--border);
+        
+        
+        @include mobile {
+            padding-block: rem(10);
+        }
+    }
+
+    &__body-inner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 15rem;
+        
+    }
+
+    &__overlay {
+        @include mobile-above {
+            display: contents;
+            
+        }
+
+        @include mobile {
+            position: fixed;
+            inset: 0;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            row-gap: rem(3);
+            padding: rem(1);
+
+            background-color: var(--color-dark-10);
+
+            transition-duration: var(--transition-duration);
+
+            &:not(.is-active) {
+                @include hide;
+
+                translate: 100%;
+            }
+        }
+    }
+
+    &__menu {
+        &-list {
+            display: flex;
+            align-items: center;
+            column-gap: 2rem;
+            list-style: none;
+            text-decoration: none;  
+        }
+        &-item {
+            font-size: rem(18);
+            font-weight: 500;  
+            line-height: rem(1.2);
+            color: var(--primary);
+            transition: all 0.2s ease-in-out;
+            @include hover {
+                color: var(--color-primary); 
+                transition-duration:  var(--transition-duration);
+            }
+            
+            
+        }
+        &-link {
+            text-decoration: none;
+            list-style: none;
+        
+            &:visited {
+                color: inherit;
+            }
+        }
+        @include laptop {
+            column-gap: rem(6);
+        }
+        @include mobile {
+            flex-direction: column;
+            row-gap: rem(1);
+        }
+
+        
+        
+    }
+    
+    &__actions {
+        display: flex;
+        align-items: center;
+        column-gap: 2rem;
+    }
+
+    .btn  {
+        &-auth {
+            display: inline-flex;
+            justify-content: center;
+            padding: rem(8) rem(7);
+            white-space: nowrap;
+            background-color: var(--color-abs-white);
+            font-size: rem(18);
+            font-weight: 500;  
+            border: var(--border);
+            border-radius: rem(12);
+
+
+            @include laptop {
+                padding: rem(6) rem(5);
+                font-size: rem(14);
+                border-radius: rem(8);
+            }
+            @include hover {
+                border: var(--border);
+                background-color: var(--color-primary);
+                border-radius: rem(12);
+            }
+        }
+    }
+    
+}
+

@@ -1,4 +1,3 @@
-import React, {useState} from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import Login from '../pages/Login';
@@ -19,7 +18,7 @@ function Header() {
                 />
                 </Link>
 
-                <div className="header__overlay is-active">
+                <div className="header__overlay">
                   <nav className="header__menu">
                     <ul className="header__menu-list">
                       <li className="header__menu-item">
@@ -37,14 +36,15 @@ function Header() {
                     </ul>
                   </nav>
 
-                  <div className="header__actions ">
+                  <div className="header__actions">
+                    
                     <button 
                     type="button"
                     className="btn btn-auth"
-                    ara-label="Sign In or Register"
-                    onClick={()=> navigate("../pages/Login.jsx") }
+                    aria-label="Sign In or Register"
+                    onClick={() => navigate("/login")}
                     >
-                      LOGIN
+                      Login / Register
                     </button>
                     <div className="header__search-bar">
                       <SearchBar />
