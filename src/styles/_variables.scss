@@ -1,0 +1,37 @@
+@use './helpers' as *;
+
+:root {
+    /* COLORS */
+--color-abs-black: #000000;
+--color-abs-white: #FFFFFF;
+
+--color-primary: #FF782D;
+--color-hover: #FFAB2D;
+--color-pressed: #F8620E;
+
+--color-neutral-dark-gray: #555555;
+--color-neutral-gray: #9D9D9D;
+--color-neutral-light-gray: #EAEAEA;
+--color-white-grey: #F5F5F5;
+
+--color-status-blue: #2580D5;
+--color-status-green: #55BE24;
+--color-status-warning: #F6B40A;
+--color-status-danger: #F51A1A;
+
+
+--border: #{rem(1)} solid var(--color-primary);
+
+/* TYPOGRAPHY */
+--font-family-base: 'Jost', sans-serif;
+--font-family-secondary: 'Exo', sans-serif;
+
+--container-width:  #{rem(1600)} ; /* Обязательно обертывать в фигурные скобки так как scss не умеет обрабатывать сам без указания именно в этом случае */
+    --container-padding-x: #{rem(16)};
+
+    --transition-duration: 0.2s;
+
+    @include laptop {
+        --container-with: #{rem(1280)};
+    }
+}
