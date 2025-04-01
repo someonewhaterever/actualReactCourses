@@ -110,9 +110,8 @@
 
 
             @include laptop {
-                padding: rem(6) rem(5);
-                font-size: rem(14);
-                border-radius: rem(8);
+                justify-content:center;
+
             }
             @include hover {
                 border: var(--border);
