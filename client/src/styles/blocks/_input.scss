@@ -1,0 +1,64 @@
+@use '../helpers' as *;
+
+.input-wrapper{
+    display: flex;
+    align-items: center;
+    
+    padding: rem(8);
+    
+
+    border-radius: rem(20);
+    border: var(--border);
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+    background-color: var(--color-abs-white);
+
+    transition: all 0.3s ease-in-out;
+
+        
+        
+
+    @include hover {
+        border: var(--border);
+        color: var(--color-abs-white);
+        border-color: var(--color-primary);
+        background-color: var(--color-primary);
+        border-radius: rem(20);
+
+        
+
+    }
+
+  .search-icon {
+    display: flex;
+    
+
+    }
+
+  .search-input {
+    flex: 1;
+    align-items: center;   
+    border: none;
+    background-color: transparent;
+    font-size: rem(16);
+    line-height: 1;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+    width: 0;      
+    opacity: 0;    
+    padding: 0; 
+    
+  }
+
+  &.active {
+    .search-input {
+      width: 150px;    
+      opacity: 1;      
+      padding: rem(8); 
+    }
+
+    @include laptop {
+      
+    }
+  }
+}
